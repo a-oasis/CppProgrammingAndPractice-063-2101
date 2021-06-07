@@ -12,7 +12,7 @@ using namespace std;
 #define KEY_NUM 4
 #define LIFE 3
 #define MAX_LEVEL 11
-#define delete 100//append 지우는 키 d의 코드값 100을 delete로 지정 
+#define delete 100//박영훈수정append 지우는 키 d의 코드값 100을 delete로 지정 
 #define Delete 68//CapsLock 상태에서도 같은 기능 
 enum MENU
 {
@@ -63,7 +63,7 @@ void DrawReadyGame()
 	cout << "Quit" << endl;
 }
 
-void DrawInfoGame()
+void DrawInfoGame()//박영훈수정
 {
 	system("cls");
 	gotoxy(1, 3);
@@ -316,7 +316,7 @@ void StartGame()
 					break;
 				}
 			}
-			else if (firstInput == Delete||firstInput == delete){//append else if 전체 
+			else if (firstInput == Delete||firstInput == delete){//박영훈 수정append else if 전체 
 				if(answerStr.size()==0){//비었을 때 
 					
 				}
@@ -333,8 +333,8 @@ void StartGame()
 				//답안 확인
 				if (CheckAnswer(questionVec, answerVec))
 				{	
-					score=score+questionVec.size()+combo;//append
-					combo=combo+questionVec.size();//append
+					score=score+questionVec.size()+combo;//박영훈 수정append
+					combo=combo+questionVec.size();//박영훈 수정append
 					
 				}
 				else
